@@ -1,0 +1,39 @@
+
+h1{
+	margin: 0 auto;
+	 text-align: center;
+}
+td{
+	width: 30px;
+	height: 30px;
+	
+	
+	padding: 0;
+	margin: 0;
+	 text-align: center;
+	 background-size:100% 100% ;
+}
+table{
+	border-spacing: 0;
+	margin:0 auto;
+	background-color: antiquewhite;
+	 text-align: center;
+	background-image: url(../img/tz.png);
+	border: 1px solid pink;
+	 /* background-size:cover ; */
+	 margin: 0 auto;
+}
+
+body{
+	
+	background-image: url(../img/xj.jpg);
+	 background-size:cover ;
+}
+
+button{
+	margin: 0 auto;
+	text-align: center;
+	font-size: 20px;
+	background-color: #FFC0CB;
+	
+}
