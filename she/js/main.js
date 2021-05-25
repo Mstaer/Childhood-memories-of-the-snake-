@@ -3,21 +3,21 @@
 function Game() {
 
 	this.fs = 0
-
-
-   this.shij()
+ this.kaishia = 1
+ this.zt = 1
+	this.shij()
 	this.fengshu()
 	this.init()
-  
+
 	this.she = new she()
-  this.kg1 = new kg()
+	this.kg1 = new kg()
 	// this.she.shili()
-  this.jsq1 = new jsq()
-	
+	this.jsq1 = new jsq()
+
 	// this.dsq()
-	
+
 	this.fx()
-  this.shud()
+	this.shud()
 	this.shiwu1 = new shiwu()
 
 }
@@ -41,8 +41,11 @@ Game.prototype.init = function() {
 
 Game.prototype.shecolor = function(row1, col1, color1) {
 	// console.log(this.dom.getElementsByTagName("tr"));
-
+ 
 	this.dom.getElementsByTagName("tr")[row1].getElementsByTagName("td")[col1].style.backgroundImage = color1
+	// if (row1 === NaN||now1 === undefined || col1 === NaN||col1 === undefined ) {
+	// 	return
+	// }
 	for (let i = 1; i < game.she.body.length; i++) {
 		this.dom.getElementsByTagName("tr")[row1].getElementsByTagName("td")[col1].style.backgroundImage = color1
 	}
@@ -114,38 +117,29 @@ Game.prototype.fx = function() {
 
 Game.prototype.dsq = function() {
 	this.f = 0
-
 	this.dsq1 = setInterval(function() {
 		game.f++
 		game.qp()
-
+		
 		document.getElementById("shudu").innerHTML = "速度:" + game.f + "/km"
 		let dr = game.she.body.length < 30 ? 30 - game.she.body.length : 1;
-
 		game.f % dr == 0 && game.she.dong();
 		
-
 		game.shiwu1.xrshiwu()
-		
 		game.she.shili()
-
-
-
+		
 	}, 20)
-
 }
 
 Game.prototype.fengshu = function() {
-
-
 	document.getElementById("fengshu").innerHTML = "当前分数:" + this.fs
 }
 
-Game.prototype.shij = function(){
-	document.getElementById("jsq").innerHTML = "本局战斗时间: 00:00:00" 
+Game.prototype.shij = function() {
+	document.getElementById("jsq").innerHTML = "本局战斗时间: 00:00:00"
 }
 
-Game.prototype.shud = function(){
-	document.getElementById("shudu").innerHTML = "速度: 0 /km" 
-	
+Game.prototype.shud = function() {
+	document.getElementById("shudu").innerHTML = "速度: 0 /km"
+
 }

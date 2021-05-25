@@ -47,8 +47,9 @@ jsq.prototype.jsqkaishi = function() {
 jsq.prototype.newjsq = function() {
 
 	document.getElementById("newkaishi").addEventListener("click", function() {
-       game.jsq1.flag = 0
+       game.jsq1.flag = 1
 			 game.jsq1.time = 0
+			 game.jsq1.start()
 	})
 
 }
