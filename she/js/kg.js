@@ -12,6 +12,7 @@ kg.prototype.zhanting = function(){
 	document.getElementById("jixu").addEventListener("click",function(){
 		game.jsq1.flag = 1
 		game.jsq1.start()
+		   clearInterval(game.dsq1)
 		  game.dsq()
 		  
 	})
@@ -19,18 +20,19 @@ kg.prototype.zhanting = function(){
 }
 kg.prototype.kaishi = function(){
 	document.getElementById("kaishi").addEventListener("click",function(){
+		   document.getElementById("oaver").style.display="none"
 		  if (game.kaishia == 1){
 				 game.f = 0
 				 game.kaishia = 0
+				 clearInterval(game.dsq1)
 				 game.dsq()
 			}
-			 
 	})
 }
 
 kg.prototype.newkaigshi = function(){
 	document.getElementById("newkaishi").addEventListener("click",function(){
-		   clearInterval(game.dsq1)
+		   document.getElementById("oaver").style.display="none"
 			 game.kaishia = 1
 			 game.fs = 0 
 			 game.f = 0
@@ -38,7 +40,11 @@ kg.prototype.newkaigshi = function(){
 			 game.shiwu1.addshiwu()
 			 game.she.direction = "39"
 			 game.she.fx="39"
+			 document.getElementById("kaishi").disabled=false
+			 document.getElementById("zhanting").disabled=false
+			 document.getElementById("jixu").disabled=false
 			 game.fengshu()
+		 	clearInterval(game.dsq1)
 			 game.dsq()
 		
 	})

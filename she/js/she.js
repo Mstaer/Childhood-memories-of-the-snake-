@@ -21,17 +21,11 @@ function she() {
 		},
 
 	];
-
-	// this.shili()
 	this.direction = "39"
 	this.fx = "39"
-	// myshe = this
-	// return myshe
-
 }
 
 she.prototype.jieshou = function(a) {
-
 	this.fx = a
 }
 
@@ -63,28 +57,37 @@ she.prototype.dong = function() {
 			})
 			break;
 	}
-	if (this.body[0].row > game.row-1 || this.body[0].col > game.col-1 || this.body[0].row < 0 || this.body[0].col <
+	if (this.body[0].row > game.row - 1 || this.body[0].col > game.col - 1 || this.body[0].row < 0 || this.body[0]
+		.col <
 		0) {
-			console.log("gameover");
-			game.jsq1.flag = 0
-			game.jsq1.time = 0
-		this.body.shift()
+		document.getElementById("kaishi").disabled=true
+		document.getElementById("zhanting").disabled=true
+		document.getElementById("jixu").disabled=true
+		document.getElementById("fenshu").innerText="本局分数:" + game.fs
+		document.getElementById("timi").innerText= game.jsq1.addtimi
+		document.getElementById("oaver").style.display="block"
 		
+		game.jsq1.flag = 0
+		game.jsq1.time = 0
+		this.body.shift()
 		clearInterval(game.dsq1)
 		return
 	} else {
 		for (let i = 1; i < this.body.length; i++) {
 			if (this.body[0].row == this.body[i].row && this.body[0].col == this.body[i].col) {
-				console.log("gameover");
+				document.getElementById("kaishi").disabled=true
+				document.getElementById("zhanting").disabled=true
+				document.getElementById("jixu").disabled=true
+				document.getElementById("oaver").style.display="block"
+				
 				game.jsq1.flag = 0
 				game.jsq1.time = 0
 				this.body.shift()
-			
 				clearInterval(game.dsq1)
 				return
 			}
 		}
-	} 
+	}
 	if (this.body[0].row == game.shiwu1.y && this.body[0].col == game.shiwu1.x) {
 		game.dom.getElementsByTagName("tr")[game.shiwu1.y].getElementsByTagName("td")[game.shiwu1.x].style
 			.backgroundImage = ""
@@ -95,15 +98,12 @@ she.prototype.dong = function() {
 	} else {
 		this.body.pop()
 	}
+	
 }
 she.prototype.shili = function() {
-	let col1 = "url(./img/g2.png)"
-	let col2 = "url(./img/g3.png)"
-
-
-	game.shecolor(this.body[0].row, this.body[0].col, col1)
-
+	 
+	game.shecolor(this.body[0].row, this.body[0].col, game.col1)
 	for (let i = 1; i < this.body.length; i++) {
-		game.shecolor(this.body[i].row, this.body[i].col, col2)
+		game.shecolor(this.body[i].row, this.body[i].col, game.col2)
 	}
 }

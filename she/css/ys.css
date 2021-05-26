@@ -37,3 +37,15 @@ button{
 	background-color: #FFC0CB;
 	
 }
+#oaver{
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 43%;
+	text-align: center;
+
+	
+}
+#oaver1{
+		font-size: 50px;
+}

@@ -4,6 +4,7 @@ function jsq() {
   console.log("kaishi");
 	this.jsqkaishi()
 	this.newjsq()
+	this.addtimi = ""
 }
 
 jsq.prototype.start =function(){
@@ -19,9 +20,9 @@ jsq.prototype.show = function(){
 	let f = game.jsq1.shou2(game.jsq1.time * 100 / 1000 % 60);
 	let m = game.jsq1.shou2(game.jsq1.time * 100 / 1000 / 60 % 60);
 	let s = game.jsq1.shou2(game.jsq1.time * 100 / 1000 / 60 / 60);
-	let addtimi =  "本局战斗时间:" + s + ":" + m + ":" + f;
+	this.addtimi =  "本局战斗时间:" + s + ":" + m + ":" + f;
 	
-	document.getElementById("jsq").innerText=addtimi
+	document.getElementById("jsq").innerText=this.addtimi
 }
 
 jsq.prototype.shou2 =function(n){

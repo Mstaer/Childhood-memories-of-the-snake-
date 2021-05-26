@@ -1,45 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>贪吃蛇</title>
-		<link rel="stylesheet" type="text/css" href="./css/ys.css"/>
-    <script type="text/javascript"   >
-    	
-   		document.addEventListener('plusready', function(){
-   			// console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。")
-   		
-   		});
-   		
-    </script>
-		 
-</head>
-<body>
-	   <div >
-	   	 <h1 id="fengshu"></h1>
-			 <h1 id="shudu"></h1>
-			 <h1 id="jsq"></h1>
-			 <div id="">
-			 	<h1><button type="button" id="kaishi">开始</button></h1>
-				<h1><button type="button" id="zhanting">暂停</button><button type="button" id="jixu">继续</button></h1>
-			 	<h1><button type="button" id="newkaishi">重新开始</button></h1>
-			 </div>
-			 
-	   </div>
-	   <div id="app">
-			 
-			 
-	   </div>
-		 <script src="./js/kg.js" type="text/javascript" charset="utf-8"></script>
-		 <script src="./js/jsq.js" type="text/javascript" charset="utf-8"></script>
-		  <script src="./js/shiwu.js" type="text/javascript" charset="utf-8"></script>
-		 <script src="./js/she.js" type="text/javascript" charset="utf-8"></script>
-		<script src="./js/main.js" type="text/javascript" charset="utf-8"></script>
-		 <script type="text/javascript">
-		 	  const game = new Game()
-		 </script>
-		  
-</body>
-</html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>贪吃蛇</title>
+		<link rel="stylesheet" type="text/css" href="./css/ys.css" />
+		<script type="text/javascript">
+			document.addEventListener('plusready', function() {
+				// console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。")
 
+			});
+		</script>
+
+	</head>
+	<body>
+		<div>
+			<h1 id="fengshu"></h1>
+			<h1 id="shudu"></h1>
+			<h1 id="jsq"></h1>
+			<div id="">
+				<h1><button type="button" id="kaishi">开始</button></h1>
+				<h1><button type="button" id="zhanting">暂停</button><button type="button" id="jixu">继续</button></h1>
+				<h1><button type="button" id="newkaishi">重新开始</button></h1>
+			</div>
+		</div>
+		<div id="app"><div id="oaver">
+			<h2 id="oaver1">Game Over</h2>
+			<h3 id="fenshu"></h3>
+			<h3 id="timi"></h3>
+		</div></div>
+		
+		<script src="./js/kg.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/jsq.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/shiwu.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/she.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/main.js" type="text/javascript" charset="utf-8"></script>
+	
+		<script type="text/javascript">
+			const game = new Game()
+		</script>
+
+	</body>
+</html>
